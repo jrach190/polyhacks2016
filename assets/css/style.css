@@ -10,6 +10,17 @@ body {
 
 strong { font-weight: 500; }
 
+.signup-container{
+    position: fixed;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    height: 750px;
+    background-color: black;
+    opacity: 0.5;
+    padding-bottom: 20px;
+}
+
 a, a:hover, a:focus {
 	color: #de615e;
 	text-decoration: none;
