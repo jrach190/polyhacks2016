@@ -12,6 +12,7 @@ strong { font-weight: 500; }
 
 .signup-container{
     position: absolute;
+    z-index = -2;
     width: 600px;
     left: 50%;
     margin-left: -300px;
@@ -21,6 +22,11 @@ strong { font-weight: 500; }
     padding-bottom: 20px;
 }
 
+.sign-stuff{
+    position: relative;
+    z-index: 1;
+}
+
 a, a:hover, a:focus {
 	color: #de615e;
 	text-decoration: none;
@@ -28,6 +34,7 @@ a, a:hover, a:focus {
 }
 
 h1, h2 {
+
 	margin-top: 10px;
 	font-size: 38px;
     font-weight: 100;
@@ -36,6 +43,7 @@ h1, h2 {
 }
 
 h3 {
+
 	font-size: 22px;
     font-weight: 300;
     color: #555;
@@ -97,6 +105,7 @@ img { max-width: 100%; }
 }
 
 .top-content .text {
+
 	color: #fff;
 }
 
