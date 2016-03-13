@@ -45,7 +45,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">User-Profile {{ phone }}</a>
+                <a class="navbar-brand" href="index.html">Welcome {{ firstName }}, {{ lastName }}</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -84,7 +84,15 @@
                             <h3 class="panel-title">Notifications</h3>
                       </div>
                       <div class="panel-body">
-                            Panel content
+                            {% if msgval== 1%}
+                                <h2>Next Notification Scheduled for 3:30 PM for an Afternoon Snack</h2>
+                            {% endif %}
+                            {% if msgval== 2%}
+                                <h2>Next Notification Scheduled for Yoga at 6:00 PM</h2>
+                            {% endif %}
+                            {% if msgval== 3%}
+                                <h2>Next Notification Scheduled for 4:00 PM to LOVE YOURSELF</h2>
+                            {% endif %}
                       </div>
                 </div>
 
@@ -94,7 +102,136 @@
                             <h3 class="panel-title">Schedule</h3>
                       </div>
                       <div class="panel-body">
-                            
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Sunday</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
+                                        <th>Saturday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% if msgval == 1%}
+                                        <tr>
+                                        <td>8:00 - Breakfast</td>
+                                        <td>8:00 - Breakfast</td>
+                                        <td>8:00 - Breakfast</td>
+                                        <td>8:00 - Breakfast</td>
+                                        <td>8:00 - Breakfast</td>
+                                        <td>8:00 - Breakfast</td>
+                                        <td>8:00 - Breakfast</td>
+                                        </tr>
+                                        <tr>
+                                        <td>10:30 - Snack</td>
+                                        <td>10:30 - Snack</td>
+                                        <td>10:30 - Snack</td>
+                                        <td>10:30 - Snack</td>
+                                        <td>10:30 - Snack</td>
+                                        <td>10:30 - Snack</td>
+                                        <td>10:30 - Snack</td>
+                                        </tr>
+                                        <tr>
+                                        <td>12:00 - Lunch</td>
+                                        <td>12:00 - Lunch</td>
+                                        <td>12:00 - Lunch</td>
+                                        <td>12:00 - Lunch</td>
+                                        <td>12:00 - Lunch</td>
+                                        <td>12:00 - Lunch</td>
+                                        <td>12:00 - Lunch</td>
+                                        </tr>
+                                        <tr>
+                                        <td>3:30 - Snack</td>
+                                        <td>3:30 - Snack</td>
+                                        <td>3:30 - Snack</td>
+                                        <td>3:30 - Snack</td>
+                                        <td>3:30 - Snack</td>
+                                        <td>3:30 - Snack</td>
+                                        <td>3:30 - Snack</td>
+                                        </tr>
+                                        <tr>
+                                        <td>7:00 - Dinner</td>
+                                        <td>7:00 - Dinner</td>
+                                        <td>7:00 - Dinner</td>
+                                        <td>7:00 - Dinner</td>
+                                        <td>7:00 - Dinner</td>
+                                        <td>7:00 - Dinner</td>
+                                        <td>7:00 - Dinner</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if msgval == 2%}
+                                        <tr>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        </tr>
+                                        <tr>
+                                        <td>6:00 - Yoga</td>
+                                        <td>6:00 - Yoga</td>
+                                        <td>6:00 - Yoga</td>
+                                        <td>6:00 - Yoga</td>
+                                        <td>6:00 - Yoga</td>
+                                        <td>6:00 - Yoga</td>
+                                        <td>6:00 - Yoga</td>
+                                        </tr>
+                                        <tr>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        </tr>
+                                    {% endif %}
+                                    {% if msgval == 3%}
+                                        <tr>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        </tr>
+                                        <tr>
+                                        <td>4:00 - Love Reminder</td>
+                                        <td>4:00 - Love Reminder</td>
+                                        <td>4:00 - Love Reminder</td>
+                                        <td>4:00 - Love Reminder</td>
+                                        <td>4:00 - Love Reminder</td>
+                                        <td>4:00 - Love Reminder</td>
+                                        <td>4:00 - Love Reminder</td>
+                                        </tr>
+                                        <tr>
+                                        <td>6:00 - Exercise</td>
+                                        <td>6:00 - Exercise</td>
+                                        <td>6:00 - Exercise</td>
+                                        <td>6:00 - Exercise</td>
+                                        <td>6:00 - Exercise</td>
+                                        <td>6:00 - Exercise</td>
+                                        <td>6:00 - Exercise</td>
+                                        </tr>
+                                        <tr>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        <td>8:00 - Medicine</td>
+                                        </tr>
+                                    {% endif %}
+                                </tbody>
+                            </table>
+
                       </div>
                 </div>
             </div>

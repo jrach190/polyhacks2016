@@ -1,0 +1,50 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper{
+    padding: 0 0 0 0px;
+    height: 100%;
+    width: 100%;
+    margin: 0 0 0 0px;
+}
+
+#sky{
+    display: none;
+    width: 100%;
+    margin: 0 0 0 0px;
+    padding: 0 0 0 0px;
+    height: 750px;
+    background-image: url('sky.jpg');
+}
+
+#boat{
+    z-index: 1;
+    top: 500px;
+    left: 600px;
+    height: 250px;
+    position: fixed;
+    background: transparent;
+}
+
+#sock{
+    display: none;
+    top: 0;
+    height: 50px;
+    position: fixed;
+    background: transparent;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#waves{
+    z-index: 2;
+    top: 680px;
+    left: -40px;
+    height: 200px;
+    width: 2000px;
+    position: fixed;
+    background: transparent;
+}

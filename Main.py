@@ -8,14 +8,17 @@ from twilio.rest import TwilioRestClient
 
 """Set up for Twilio"""
 #define account_sid and auth_token and create a TwilioRestClient instance to utilize twilio API
-account_sid = "XXX"
-auth_token = "XXX"
+account_sid = "AC701857f97365f037c714cc0a68c65bbc"
+auth_token = "c8e1bdf9b7d74153b9f8458a74d85613"
+
+
+
+US = "+14079017873"
 client = TwilioRestClient(account_sid,auth_token)
 
 #create variable value for phone and variable to track signup message
 phone = ""
 msgval=0
-US = "XXX"
 
 #define initial signup messages to send based on settings clicked in signup
 anomsg = "Thank you for signing up for anorexia management reminders. Scheduled eating reminders will proceed at 8:00AM for breakfast, 10:30AM for a morning snack, 12:00PM for lunch, 3:30PM for an afternoon snack, and 7:00PM for dinner."
@@ -98,7 +101,9 @@ def profile():
         message = client.messages.create(to=("+1"+phone), from_=US, body=dmsg)
     else:
         message = client.messages.create(to=("+1"+phone), from_=US, body=defmsg)
-    return render_template("profile.html",phone = phone)
+
+
+    return render_template("profile.html", phone = phone, firstName = request.form['first_name'], lastName = request.form['last_name'], msgval = msgval)
 
 
 if __name__ == "__main__":
