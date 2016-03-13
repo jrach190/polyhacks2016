@@ -8,8 +8,8 @@ from twilio.rest import TwilioRestClient
 
 """Set up for Twilio"""
 #define account_sid and auth_token and create a TwilioRestClient instance to utilize twilio API
-account_sid = "XXX"
-auth_token = "XXX"
+account_sid = "AC701857f97365f037c714cc0a68c65bbc"
+auth_token = "c8e1bdf9b7d74153b9f8458a74d85613"
 client = TwilioRestClient(account_sid,auth_token)
 
 #create variable value for phone and variable to track signup message
@@ -58,7 +58,7 @@ def signup2():
 @app.route("/index")
 def index():
     phone = request.form['phone']
-    message = client.messages.create(to=("+1"+user), from_= "XXX", body=amsg)
+    message = client.messages.create(to=("+1"+user), from_= "+14079017873", body=amsg)
 
     return render_template("pages/index.html",phone = request.form['phone'])
 
@@ -66,14 +66,14 @@ def index():
 @app.route("/indexa")
 def indexa():
     phone = request.form['phone']
-    message = client.messages.create(to=("+1"+user), from_= "XXX", body=anxmsg)
+    message = client.messages.create(to=("+1"+user), from_= "+14079017873", body=anxmsg)
     return render_template("pages/indexa.html",phone = request.form['phone'])
 
 
 @app.route("/indexb")
 def indexb():
     phone = request.form['phone']
-    message = client.messages.create(to=("+1"+user), from_= "XXX", body=dmsg)
+    message = client.messages.create(to=("+1"+user), from_= "+14079017873", body=dmsg)
     return render_template("pages/indexb.html",phone = request.form['phone'])
 
 
@@ -84,9 +84,7 @@ def logged_in():
 
 @app.route("/profile", methods=['GET', 'POST'])
 def profile():
-    phone = request.form['phone']
-    message = client.messages.create(to=("+1"+user), from_= "XXX", body=defmsg)
-    return render_template("profile.html", phone=request.form['phone'])
+    return render_template("profile.html")
 
 
 if __name__ == "__main__":
