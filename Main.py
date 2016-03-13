@@ -89,6 +89,11 @@ def logged_in():
     return render_template("index.html")
 
 
+@app.route("/socks")
+def sockin():
+    return render_template("sockrock.html")
+
+
 @app.route("/profile", methods=['GET', 'POST'])
 def profile():
     print msgval
