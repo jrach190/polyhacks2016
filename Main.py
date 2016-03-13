@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
@@ -27,7 +27,7 @@ def signup2():
     return render_template("signup2.html")
 
 
-@app.route("/index")
+@app.route("/index/<user>")
 def index():
     return render_template("pages/index.html")
 
@@ -50,6 +50,7 @@ def logged_in():
 @app.route("/profile")
 def profile():
     return render_template("profile.html")
+
 
 if __name__ == "__main__":
     app.run()
