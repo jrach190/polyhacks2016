@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 app = Flask(__name__)
+phone = 0
 
 
 @app.route("/")
@@ -12,7 +13,7 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/signup")
+@app.route("/signup", methods=['GET', 'POST'])
 def signup():
     return render_template("signup.html")
 
@@ -27,7 +28,7 @@ def signup2():
     return render_template("signup2.html")
 
 
-@app.route("/index/<user>")
+@app.route("/index")
 def index():
     return render_template("pages/index.html")
 
@@ -47,9 +48,9 @@ def logged_in():
     return render_template("index.html")
 
 
-@app.route("/profile")
+@app.route("/profile", methods=['GET', 'POST'])
 def profile():
-    return render_template("profile.html")
+    return render_template("profile.html", phone=request.form['phone'])
 
 
 if __name__ == "__main__":
