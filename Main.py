@@ -8,12 +8,12 @@ from twilio.rest import TwilioRestClient
 
 """Set up for Twilio"""
 #define account_sid and auth_token and create a TwilioRestClient instance to utilize twilio API
-account_sid = "AC701857f97365f037c714cc0a68c65bbc"
-auth_token = "c8e1bdf9b7d74153b9f8458a74d85613"
+account_sid = "xXx"
+auth_token = "xXx"
 
 
 
-US = "+14079017873"
+US = "xXx"
 client = TwilioRestClient(account_sid,auth_token)
 
 #create variable value for phone and variable to track signup message
